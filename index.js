@@ -1,4 +1,5 @@
 // Chargement du module express
+const e = require('express');
 const express = require('express');
 // Instanciation d'un objet express
 const app = express();
@@ -24,6 +25,14 @@ app.get('/parkings/:id', (req,res) => {
     // En cas de succès on renvoie l'objet parking (au format JSON) 
     // lors de la consultation de la route paramétrée
     res.status(200).json(parking);
+});
+
+// Définition de la route POST /parkings
+app.post('/parkings', (req, res) =>{
+    // On envoie les données d'un nouveau parking pour les ajouter à notre liste de parkings existante
+    parkings.push(req.body);
+    // En cas de succès on renvoie la liste d'objet parking actualisée(au format JSON) 
+    res.status(200).json(parkings);
 });
 
 // Lancement du serveur sur le port d'écoute défini
