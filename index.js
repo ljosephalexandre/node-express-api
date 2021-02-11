@@ -41,7 +41,7 @@ app.put('/parkings/:id', (req, res) => {
     // On charge l'objet parking correspondant à l'id passé en paramètre dans l'objet parking
     let parking = parkings.find(parking => parking.id === id);
     // On modifie les propriétés de l'objet
-    parking.name = req.name;
+    parking.name = req.body.name;
     parking.city = req.body.city;
     parking.type = req.body.type;
     // En cas de succès on renvoie l'objet parking mis à jour (au format JSON) 
