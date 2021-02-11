@@ -59,7 +59,7 @@ app.delete('/parkings/:id', (req, res) => {
     parkings.slice(parkings.indexOf(parking),1);
     // En cas de succès on renvoie l'objet parking mis à jour (au format JSON) 
     // lors de la consultation de la route paramétrée
-    res.status(200).json(parking);
+    res.status(200).json(parkings);
 });
 
 // Lancement du serveur sur le port d'écoute défini
