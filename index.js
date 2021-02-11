@@ -1,5 +1,4 @@
 // Chargement du module express
-const e = require('express');
 const express = require('express');
 // Instanciation d'un objet express
 const app = express();
@@ -9,7 +8,7 @@ const port = process.env.PORT||8080;
 const parkings = require('./parkings.json');
 
 // Ajout du middleware
-app.use(express.json);
+app.use(express.json());
 
 // Définition de la route GET /parkings
 app.get('/parkings', (req,res) => {
