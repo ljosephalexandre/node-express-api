@@ -5,6 +5,10 @@ const app = express();
 // Définition du port d'écoute
 const port = process.env.PORT||8080;
 
+// Définition de la route GET /parkings
+app.get('/parkings', (req,res) => {
+    res.send('Liste des parkings');
+});
 
 // Lancement du serveur sur le port d'écoute défini
 app.listen(port, () =>{
