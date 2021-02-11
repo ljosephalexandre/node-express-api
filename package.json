@@ -1,0 +1,22 @@
+{
+  "name": "node-express-api",
+  "version": "1.0.0",
+  "description": "Création d'une API REST via le module node express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljosephalexandre/node-express-api.git"
+  },
+  "author": "Lionel JOSEPH-ALEXANDRE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljosephalexandre/node-express-api/issues"
+  },
+  "homepage": "https://github.com/ljosephalexandre/node-express-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
