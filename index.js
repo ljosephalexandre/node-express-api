@@ -48,7 +48,20 @@ app.put('/parkings/:id', (req, res) => {
     // En cas de succès on renvoie l'objet parking mis à jour (au format JSON) 
     // lors de la consultation de la route paramétrée
     res.status(200).json(parking);
-})
+});
+
+// Définition de la route DELETE /parkings
+app.delete('/parkings/:id', (req, res) => {
+    // On récupère l'id passé en paramètre dans ma route
+    const id = parseInt(req.params.id);
+    // On charge l'objet parking correspondant à l'id passé en paramètre dans l'objet parking
+    let parking = parkings.find(parking => parking.id === id);
+    //On supprime le parking sélectionné de la liste de parkings
+    parkings.slice(parkings.indexOf(parking),1);
+    // En cas de succès on renvoie l'objet parking mis à jour (au format JSON) 
+    // lors de la consultation de la route paramétrée
+    res.status(200).json(parking);
+});
 
 // Lancement du serveur sur le port d'écoute défini
 app.listen(port, () => {
